@@ -45,13 +45,13 @@ view: sachin_details {
     type: number
     sql: ${TABLE}.RUNS ;;
   }
-dimension: century {
+ dimension: century {
   type: number
-  sql:(case when ${runs}>=100 then 1 else 0);;
+  sql: (CASE WHEN ${runs}>100 1 else 0 end) ;;
 }
   dimension: fifty {
     type: number
-    sql:(case when (${runs}>=50 AND ${runs}<100) then 1 else 0);;
+    sql:(case when (${runs}>=50 AND ${runs}<100) then 1 else 0 end);;
   }
   dimension: second_player {
     type: string
