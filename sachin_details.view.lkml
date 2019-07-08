@@ -62,7 +62,7 @@ dimension: century {
     type: number
     sql: ${TABLE}.SIXES ;;
   }
-measure: Fifty {
+measure: FiftyCount {
   type: count_distinct
   sql: ${fifty} ;;
 }
