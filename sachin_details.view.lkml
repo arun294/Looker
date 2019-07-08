@@ -45,7 +45,14 @@ view: sachin_details {
     type: number
     sql: ${TABLE}.RUNS ;;
   }
-
+dimension: century {
+  type: yesno
+  sql: ${runs}>=100 ;;
+}
+  dimension: fifty {
+    type: yesno
+    sql: ${runs}>=50 ;;
+  }
   dimension: second_player {
     type: string
     sql: ${TABLE}.SECOND_PLAYER ;;
