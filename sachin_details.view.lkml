@@ -62,7 +62,10 @@ dimension: century {
     type: number
     sql: ${TABLE}.SIXES ;;
   }
-
+measure: Fifty {
+  type: sum
+  sql: ${fifty} ;;
+}
   measure: count {
     type: count
     drill_fields: []
