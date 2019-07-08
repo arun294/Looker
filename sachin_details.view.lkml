@@ -51,7 +51,7 @@ dimension: century {
 }
   dimension: fifty {
     type: number
-    sql:(case when ${runs}>=50 AND ${runs}<100 then 1 else 0);;
+    sql:(case when (${runs}>=50 AND ${runs}<100) then 1 else 0);;
   }
   dimension: second_player {
     type: string
