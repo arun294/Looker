@@ -47,7 +47,7 @@ view: sachin_details {
   }
  dimension: century {
   type: number
-  sql: (CASE WHEN ${runs}>100 1 else 0 end) ;;
+  sql: (CASE WHEN ${runs}>100 then 1 else 0 end) ;;
 }
   dimension: fifty {
     type: number
