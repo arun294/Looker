@@ -46,12 +46,12 @@ view: sachin_details {
     sql: ${TABLE}.RUNS ;;
   }
 dimension: century {
-  type: yesno
-  sql: ${runs}>=100 ;;
+  type: number
+  sql:(case when ${runs}>=100 then 1 else 0);;
 }
   dimension: fifty {
-    type: yesno
-    sql: ${runs}>=50 AND ${runs}<100;;
+    type: number
+    sql:(case when ${runs}>=50 AND ${runs}<100 then 1 else 0);;
   }
   dimension: second_player {
     type: string
@@ -63,8 +63,9 @@ dimension: century {
     sql: ${TABLE}.SIXES ;;
   }
 measure: FiftyCount {
-  type: count_distinct
+  type: sum
   sql: ${fifty} ;;
+
 }
   measure: count {
     type: count
