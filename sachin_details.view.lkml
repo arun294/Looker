@@ -67,6 +67,11 @@ measure: FiftyCount {
   sql: ${fifty} ;;
 
 }
+  measure: CenturyCount {
+    type: sum
+    sql: ${century} ;;
+
+  }
   measure: count {
     type: count
     drill_fields: []
