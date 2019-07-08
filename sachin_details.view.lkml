@@ -51,7 +51,7 @@ dimension: century {
 }
   dimension: fifty {
     type: yesno
-    sql: ${runs}>=50 ;;
+    sql: ${runs}>=50 && ${runs}<100;;
   }
   dimension: second_player {
     type: string
